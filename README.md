@@ -27,8 +27,8 @@ app.service('mainService', function($http, $q) {
 var app = angular.module('userProfiles');
 
 app.service('mainService', function($http, $q) {
-  var deferred = $q.defer();
   this.getUsers = function() {
+  var deferred = $q.defer();
     return $http({
         method: 'GET',
         url: 'http://reqr.es/api/users?page=1'
